@@ -15,6 +15,7 @@ char ch;
 //Initializes the outputs
 void setup() {
   Serial.begin(9600);
+  
   pinMode(rled, OUTPUT);
   pinMode(bled, OUTPUT);
   pinMode(gled, OUTPUT);
@@ -69,13 +70,168 @@ delay(100);
 
 //Decodes the input
 void pattern(){
-  if (ch == '1'){
+  if (ch == 'a' or ch == 'A'){
     dot();
-  }
-  else if (ch== '2' ){
     dash();
+    space();
   }
-  else if (ch== '3' ){
+  else if (ch == 'b' or ch == 'B'){
+    dash();
+    dot();
+    dot();
+    dot();
+    space();
+  }
+  else if (ch == 'c' or ch == 'C'){
+    dash();
+    dot();
+    dash();
+    dot();
+    space();
+  }
+  else if (ch == 'd' or ch == 'D'){
+    dash();
+    dot();
+    dot();
+    space();
+  }
+  else if (ch == 'e' or ch == 'E'){
+    dot();
+    space();
+  }
+  else if (ch == 'f' or ch == 'F'){
+    dot();
+    dot();
+    dash();
+    dot();
+    space();
+  }
+  else if (ch == 'g' or ch == 'G'){
+    dash();
+    dash();
+    dot();
+    space();
+  }
+  else if (ch == 'h' or ch == 'H'){
+    dot();
+    dot();
+    dot();
+    dot();
+    space();
+  }
+  else if (ch == 'i' or ch == 'I'){
+    dot();
+    dot();
+    space();
+  }
+  else if (ch == 'j' or ch == 'J'){
+    dot();
+    dash();
+    dash();
+    dash();
+    space();
+  }
+  else if (ch == 'k' or ch == 'K'){
+    dash();
+    dot();
+    dash();
+    space();
+  }
+  else if (ch == 'l' or ch == 'L'){
+    dot();
+    dash();
+    dot();
+    dot();
+    space();
+  }
+  else if (ch == 'm' or ch == 'M'){
+    dash();
+    dash();
+    space();
+  }
+  else if (ch == 'n' or ch == 'N'){
+    dash();
+    dot();
+    space();
+  }
+  else if (ch == 'o' or ch == 'O'){
+    dash();
+    dash();
+    dash();
+    space();
+  }
+  else if (ch == 'p' or ch == 'P'){
+    dot();
+    dash();
+    dash();
+    dot();
+    space();
+  }
+  else if (ch == 'q' or ch == 'Q'){
+    dash();
+    dash();
+    dot();
+    dash();
+    space();
+  }
+  else if (ch == 'r' or ch == 'R'){
+    dot();
+    dash();
+    dot();
+    space();
+  }
+  else if (ch == 's' or ch == 'S'){
+    dot();
+    dot();
+    dot();
+    space();
+  }
+  else if (ch == 't' or ch == 'T'){
+    dash();
+    space();
+  }
+  else if (ch == 'u' or ch == 'U'){
+    dot();
+    dot();
+    dash();
+    space();
+  }
+  else if (ch == 'v' or ch == 'V'){
+    dot();
+    dot();
+    dot();
+    dash();
+    space();
+  }
+  else if (ch == 'w' or ch == 'W'){
+    dot();
+    dash();
+    dash();
+    space();
+  }
+  else if (ch == 'x' or ch == 'X'){
+    dash();
+    dot();
+    dot();
+    dash();
+    space();
+  }
+  else if (ch == 'y' or ch == 'Y'){
+    dash();
+    dot();
+    dash();
+    dash();
+    space();
+  }
+  else if (ch == 'z' or ch == 'Z'){
+    dash();
+    dash();
+    dot();
+    dot();
+    space();
+  }
+  else if (ch == ' ' ){
+    space();
     space();
   }
 }
