@@ -2,9 +2,9 @@
 //By Jeffrey Chen
 
 //Set the variables for the outputs
-const int rled = 12;
-const int gled = 27;
-const int bled = 33;
+const int rLED = 12;
+const int gLED = 27;
+const int bLED = 33;
 const int sound = 32;
 
 //Variables for the compiler
@@ -16,9 +16,9 @@ char ch;
 void setup() {
   Serial.begin(9600);
   
-  pinMode(rled, OUTPUT);
-  pinMode(bled, OUTPUT);
-  pinMode(gled, OUTPUT);
+  pinMode(rLED, OUTPUT);
+  pinMode(bLED, OUTPUT);
+  pinMode(gLED, OUTPUT);
   pinMode(sound, OUTPUT);
 }
 
@@ -35,37 +35,34 @@ void loop() {
 }
 
 //This is to show a dot on the Serial and the LED/Sound unit
-void dot()
-{
-Serial.print(".");
-digitalWrite(rled, HIGH);
-digitalWrite(sound, HIGH);
-delay(100);
-digitalWrite(rled, LOW);
-digitalWrite(sound, LOW);
-delay(100);
+void dot(){
+  Serial.print(".");
+  digitalWrite(rLED, HIGH);
+  digitalWrite(sound, HIGH);
+  delay(100);
+  digitalWrite(rLED, LOW);
+  digitalWrite(sound, LOW);
+  delay(100);
 }
 
 //This is to show a dash on the Serial and the LED/Sound unit
-void dash()
-{
-Serial.print("-");
-digitalWrite(bled, HIGH);
-digitalWrite(sound, HIGH);
-delay(300);
-digitalWrite(bled, LOW);
-digitalWrite(sound, LOW);
-delay(100);
+void dash(){
+  Serial.print("-");
+  digitalWrite(bLED, HIGH);
+  digitalWrite(sound, HIGH);
+  delay(300);
+  digitalWrite(bLED, LOW);
+  digitalWrite(sound, LOW);
+  delay(100);
 }
 
 //This is to show a space on the Serial and the LED unit
-void space()
-{
-Serial.print(" ");
-digitalWrite(gled, HIGH);
-delay(100);
-digitalWrite(gled, LOW);
-delay(100);
+void space(){
+  Serial.print(" ");
+  digitalWrite(gLED, HIGH);
+  delay(100);
+  digitalWrite(gLED, LOW);
+  delay(100);
 }
 
 //Decodes the input
